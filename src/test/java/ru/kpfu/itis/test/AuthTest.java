@@ -1,6 +1,7 @@
 package ru.kpfu.itis.test;
 
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 import ru.kpfu.itis.model.AccountData;
 
 /**

@@ -1,8 +1,9 @@
 package ru.kpfu.itis.test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import ru.kpfu.itis.model.VideoData;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Anvar Khasanov
@@ -21,7 +22,7 @@ public class UpdateVideoTest extends BaseTest {
         applicationManager.getNavigationHelper().getVideoCreationPage();
         VideoData updatedVideoData = applicationManager.getVideoHelper().getLastVideoData();
 
-        Assert.assertEquals(videoData.getTitle(), updatedVideoData.getTitle());
-        Assert.assertEquals(videoData.getUrl(), updatedVideoData.getUrl());
+        assertEquals(videoData.getTitle(), updatedVideoData.getTitle());
+        assertEquals(videoData.getUrl(), updatedVideoData.getUrl());
     }
 }

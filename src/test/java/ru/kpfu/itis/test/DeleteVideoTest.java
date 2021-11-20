@@ -1,9 +1,6 @@
 package ru.kpfu.itis.test;
 
-import org.junit.Assert;
-import org.junit.Test;
-import ru.kpfu.itis.model.VideoCreateData;
-import ru.kpfu.itis.model.VideoData;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Anvar Khasanov

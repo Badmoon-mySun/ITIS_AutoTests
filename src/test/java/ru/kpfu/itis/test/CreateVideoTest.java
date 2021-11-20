@@ -1,11 +1,15 @@
 package ru.kpfu.itis.test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import ru.kpfu.itis.model.VideoCreateData;
 import ru.kpfu.itis.model.VideoData;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * @author Anvar Khasanov
+ * student of ITIS KFU
+ */
 public class CreateVideoTest extends BaseTest {
 
     @Test
@@ -17,7 +21,7 @@ public class CreateVideoTest extends BaseTest {
 
         VideoData createdVideoData = applicationManager.getVideoHelper().getLastVideoData();
 
-        Assert.assertEquals(videoData.getUrl(), createdVideoData.getUrl());
+        assertEquals(videoData.getUrl(), createdVideoData.getUrl());
     }
 }
 

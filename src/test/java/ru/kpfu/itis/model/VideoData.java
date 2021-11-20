@@ -1,5 +1,9 @@
 package ru.kpfu.itis.model;
 
+/**
+ * @author Anvar Khasanov
+ * student of ITIS KFU
+ */
 public class VideoData {
     private String title;
     private String url;

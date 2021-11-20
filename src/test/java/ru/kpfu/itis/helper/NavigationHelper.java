@@ -19,14 +19,18 @@ public class NavigationHelper extends BaseHelper {
     }
 
     public void getLoginPage() {
-        this.driver.get(baseUrl + "/login");
+        this.driver.get(baseUrl + "/login/");
     }
 
     public void getLogoutPage() {
-        this.driver.get(baseUrl + "/logout");
+        this.driver.get(baseUrl + "/logout/");
     }
 
     public void getVideoCreationPage() {
-        this.driver.get(baseUrl + "/teacher/video/subject-0");
+        this.driver.get(baseUrl + "/teacher/video/subject-0/");
+    }
+
+    public void getTestCreationTest() {
+        this.driver.get(baseUrl + "/teacher/test/create/");
     }
 }

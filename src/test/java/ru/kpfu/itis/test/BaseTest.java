@@ -1,15 +1,23 @@
 package ru.kpfu.itis.test;
 
-
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import ru.kpfu.itis.ApplicationManager;
 
+/**
+ * @author Anvar Khasanov
+ * student of ITIS KFU
+ */
 public class BaseTest {
-    protected ApplicationManager applicationManager;
+    protected static ApplicationManager applicationManager;
 
-    @Before
-    public void setUp() {
+    @BeforeAll
+    protected static void setUp() {
         applicationManager = ApplicationManager.getInstance();
     }
+
+
+//    protected static void down() {
+//        applicationManager.stop();
+//    }
 }

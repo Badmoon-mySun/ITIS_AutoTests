@@ -4,11 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.kpfu.itis.helper.LoginHelper;
 import ru.kpfu.itis.helper.NavigationHelper;
+import ru.kpfu.itis.helper.TestHelper;
 import ru.kpfu.itis.helper.VideoHelper;
+import ru.kpfu.itis.model.TestData;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * @author Anvar Khasanov
@@ -21,6 +23,7 @@ public class ApplicationManager {
     private LoginHelper loginHelper;
     private NavigationHelper navigationHelper;
     private VideoHelper videoHelper;
+    private TestHelper testHelper;
     private static ThreadLocal<ApplicationManager> applicationManagerThreadLocal = new ThreadLocal<>();
 
     private ApplicationManager() {
@@ -34,6 +37,7 @@ public class ApplicationManager {
         loginHelper = new LoginHelper(this);
         navigationHelper = new NavigationHelper(this, baseUrl);
         videoHelper = new VideoHelper(this);
+        testHelper = new TestHelper(this);
     }
 
     public static ApplicationManager getInstance() {
@@ -73,5 +77,9 @@ public class ApplicationManager {
 
     public VideoHelper getVideoHelper() {
         return videoHelper;
+    }
+
+    public TestHelper getTestHelper() {
+        return testHelper;
     }
 }

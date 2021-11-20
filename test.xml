@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tests>
+    <test>
+        <questions>
+            <answer>Moab Is My Washpot</answer>
+            <mark>8</mark>
+            <question>A Time to Kill</question>
+        </questions>
+        <questions>
+            <answer>Beneath the Bleeding</answer>
+            <mark>9</mark>
+            <question>Stranger in a Strange Land</question>
+        </questions>
+        <subject>Информатика</subject>
+        <theme>The Curious Incident of the Dog in the Night-Time</theme>
+        <title>Matsoft</title>
+    </test>
+    <test>
+        <questions>
+            <answer>To Sail Beyond the Sunset</answer>
+            <mark>5</mark>
+            <question>As I Lay Dying</question>
+        </questions>
+        <questions>
+            <answer>No Longer at Ease</answer>
+            <mark>7</mark>
+            <question>The Far-Distant Oxus</question>
+        </questions>
+        <subject>Информатика</subject>
+        <theme>Jesting Pilate</theme>
+        <title>Bitwolf</title>
+    </test>
+</tests>
