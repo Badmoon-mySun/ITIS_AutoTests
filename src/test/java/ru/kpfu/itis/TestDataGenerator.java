@@ -9,6 +9,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +18,9 @@ import java.util.List;
  * student of ITIS KFU
  */
 public class TestDataGenerator {
-    public static void main(String[] args) {
-        Faker faker = new Faker();
+    private final String filepath;
 
+    public static void main(String[] args) {
         int testsCount = 0;
         int questionsCount = 0;
         if (args.length > 0) {
@@ -31,6 +32,17 @@ public class TestDataGenerator {
                 }
             } catch (NumberFormatException ignore) {}
         }
+
+        TestDataGenerator testDataGenerator = new TestDataGenerator("test.xml");
+        testDataGenerator.generateTests(testsCount, questionsCount);
+    }
+
+    public TestDataGenerator(String filename) {
+        filepath = filename;
+    }
+
+    public void generateTests(int testsCount, int questionsCount) {
+        Faker faker = new Faker();
 
         List<TestData> tests = new ArrayList<>();
         for (int i = 0; i < testsCount; i++) {
@@ -63,7 +75,7 @@ public class TestDataGenerator {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    private static void jaxbObjectToXML(TestsData tests) {
+    private void jaxbObjectToXML(TestsData tests) {
         try {
             //Create JAXB Context
             JAXBContext jaxbContext = JAXBContext.newInstance(TestsData.class);
@@ -80,7 +92,7 @@ public class TestDataGenerator {
             //Write XML to StringWriter
             jaxbMarshaller.marshal(tests, sw);
 
-            File file = new File("test.xml");
+            File file = new File(filepath);
             PrintWriter printWriter = new PrintWriter(file);
             printWriter.write(sw.toString());
             printWriter.close();

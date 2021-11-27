@@ -30,9 +30,9 @@ public class ApplicationManager {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         verificationErrors = new StringBuffer();
-        baseUrl = "https://school-sotka.herokuapp.com";
+        baseUrl = Settings.getBaseUrl();
 
         loginHelper = new LoginHelper(this);
         navigationHelper = new NavigationHelper(this, baseUrl);

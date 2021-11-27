@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Anvar Khasanov
  * student of ITIS KFU
  */
-public class CreateVideoTest extends BaseTest {
+public class CreateVideoTest extends AuthBase {
 
     @Test
     public void testAddVideo() throws Exception {

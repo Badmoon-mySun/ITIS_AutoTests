@@ -5,11 +5,11 @@ package ru.kpfu.itis.model;
  * student of ITIS KFU
  */
 public class AccountData {
-    private final String username;
+    private final String email;
     private final String password;
 
-    public AccountData(String username, String password) {
-        this.username = username;
+    public AccountData(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 
@@ -17,7 +17,7 @@ public class AccountData {
         return password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 }
